@@ -1,0 +1,223 @@
+html{font-size: 62.5%;}
+body{margin: 0;
+   font-family: 'poppins';
+   background: url(images/Hannan\ mockup1.png);
+   background-repeat:no-repeat;
+   background-size: auto; }
+.wrapper{ max-width:  1200px;
+margin: auto auto;
+align-items: center;
+align-content: center;
+
+}
+header{ display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+img{padding: 2em;}
+nav{margin: 4em;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 4.1em;
+    margin: 0;
+
+}
+.opening{
+    font-size: 10em;
+    font-family: 'playfair design';
+    font-weight: bolder;
+    font-display: "";
+    padding-block-start: 1em;
+    color: blueviolet;
+}
+nav ul li a{
+    text-decoration:none ;
+    color:black;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position:relative;
+}
+nav ul li a.active:before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height:1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+/* hero Section */
+main{
+    display:flex;
+    gap:8em;
+    margin-top: 1em;
+
+}
+.left col{
+    width: 45%;
+
+}
+.right col{
+    flex-grow: 1;
+}
+h1{
+    font-size: 5.2em;
+    font-family: 'playfair design';
+    font-weight: normal;
+    margin: 0;
+}
+.subhead{
+    font: size 1.8rem;
+}
+.cta-btns{
+    margin: 5em 0;
+    display: flex;
+    gap:2em;
+
+}
+.primary-cta, .secondary-cta {
+    background-color:white;
+    font-size:1.8rem;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding:1em 2em;
+
+}
+.secondary-cta{
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: block;
+    padding: 1em 0;
+    transition: transform .3s;
+}
+.secondary-cta svg{
+    width:20px;
+    transition: transform .3s;
+}
+.news{
+    display: flex;
+    gap:3em;
+    padding:5em;
+    border: 1px solid black;
+    border-radius: .8em; 
+}
+.news:before{
+    position: absolute;
+    content: "";
+    background: local;
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left:-20px;
+    z-index: 2;
+}
+p.employees{
+    font-size: 2.2rem;
+    line-height: 100%;
+    
+}
+p.details{
+    font-size: 1.4rem;
+    margin: 0;
+  
+}
+/*right column gallery*/
+.right-col{
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    "left ." 
+    "left .";
+}
+.card{
+    background: #808080;
+    padding: 1.1em;
+    display: flex;
+    align-items: end;
+    background-size:150%;
+
+
+}
+.card1 {
+    grid-area: left;
+    border-radius: .8em;
+    
+    background-image: url('../images/clothing1.jpg');
+}
+.card2 {
+    grid-area: right;
+    background-image: url('../images/clothing2.jpg');
+}
+.card3 {
+    grid-area: right;
+    background-image: url('../images/clothing3.jpg');
+}
+.card-details{
+    background: white;
+    border-radius: 6em;
+    padding: 2em;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    transition:transform 800ms;
+}
+/*effecr*/
+ nav ul li a: hover:before {
+    width:35%;
+    hover text-decoration: underline;}
+.primary-cta:hover{
+  background: #583838;
+}
+.secondary-cta:hover svg{
+    transform: translateX(10px);
+}
+.card:hover: .card-details{
+    transform:translateY(-20px);
+}
+.card:hover {
+    background-size: 160%;
+}
+
+ /* =Responsive Structure
+----------------------------------------------- */
+
+
+  /* Intro Animation */
+
+.overlay {
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+main {
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+}
+
+@keyframes growIn {
+    to {
+        transform: scale(1);
+    }
+    @media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
